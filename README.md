@@ -35,7 +35,7 @@ Welcome to the SPROUT Hackathon! This starter repo helps you use your company's 
 ### Steps to Run
 
 1. Open the folder in VS Code
-2. Update your `appsettings.json` with real API credentials
+2. Update your `SproutHackathon.API/appsettings.json` with real API credentials
 3. Press `F5` to launch with the debugger
 4. Open your browser to `https://localhost:5069/`
 
