@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SproutHackathon - Vue Frontend</title>
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Employee Lookup</h1>
+    <label>Employee ID:</label>
+    <input v-model="employeeId" placeholder="e.g. 123" />
+    <button @click="fetchEmployee">Get Employee</button>
+
+    <div v-if="loading">Loading...</div>
+    <div v-if="error" style="color:red;">{{ error }}</div>
+    <div v-if="employee">
+      <h2>Employee Info</h2>
+      <p><strong>ID:</strong> {{ employee.id }}</p>
+      <p><strong>Name:</strong> {{ employee.fullName }}</p>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          employeeId: '',
+          employee: null,
+          loading: false,
+          error: ''
+        };
+      },
+      methods: {
+        async fetchEmployee() {
+          this.loading = true;
+          this.employee = null;
+          this.error = '';
+
+          try {
+            const response = await fetch(`/api/employee/${this.employeeId}`);
+            if (!response.ok) throw new Error("Not found or server error");
+            const data = await response.json();
+            this.employee = data;
+          } catch (err) {
+            this.error = 'Failed to fetch employee.';
+          } finally {
+            this.loading = false;
+          }
+        } 
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>

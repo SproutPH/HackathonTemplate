@@ -35,14 +35,9 @@ Welcome to the SPROUT Hackathon! This starter repo helps you use your company's 
 ### Steps to Run
 
 1. Open the folder in VS Code
-2. 3. In terminal:
-   ```bash
-   dotnet restore
-   dotnet run
-   ```
-3. Update your `appsettings.json` with real API credentials
-4. Press `F5` to launch with the debugger
-5. Open your browser to `https://localhost:5069/`
+2. Update your `appsettings.json` with real API credentials
+3. Press `F5` to launch with the debugger
+4. Open your browser to `https://localhost:5069/`
 
 ---
 
