@@ -12,6 +12,26 @@ Welcome to the SPROUT Hackathon! This starter repo helps you use your company's 
 - Ready-to-use endpoint: `/api/employee/{id}`
 - Open for AI extensibility
 
+SproutHackathon/
+├── SproutHackathon.API/         # Presentation Layer (Startup project)
+│   ├── Controllers/             # API endpoints
+│   ├── wwwroot/                 # Static files (landing page, frontend)
+│   ├── appsettings.json         # Environment config (tenant, URLs, secrets)
+│   └── Program.cs               # Startup logic
+│
+├── SproutHackathon.BLL/         # Business Logic Layer (DTOs, Services)
+│   ├── DTOs/
+│   ├── Interfaces/
+│   └── Services/
+│
+├── SproutHackathon.Services/    # Partner API integration (external)
+│   ├── Interfaces/
+│   ├── Repositories/
+│   └── Helpers/
+│
+├── SproutHackathon.sln          # Solution file
+└── README.md                    # Hackathon guide
+
 ---
 ## 🚀 Getting Started (VS Code Friendly)
 
