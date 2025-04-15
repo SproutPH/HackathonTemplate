@@ -1,6 +1,6 @@
-# SPR Hackathon Starter
+# Sprout Hackathon Starter
 
-Welcome to the SPROUT Hackathon! This starter repo helps you use your company's Partner API and build AI-enhanced apps — no full Visual Studio required.
+Welcome to the Sprout Hackathon! This starter repo helps you use your company's Partner API and build AI-enhanced apps — no full Visual Studio required.
 
 ---
 
