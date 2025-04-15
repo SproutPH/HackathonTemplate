@@ -1,0 +1,78 @@
+# Build results
+bin/
+obj/
+*.exe
+*.dll
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+.vscode/*
+
+# Mac & Linux files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# dotnet CLI
+.project.lock.json
+project.lock.json
+project.fragment.lock.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+*.psmdcp
+
+# Resharper & Rider
+.idea/
+*.DotSettings.user
+
+# ASP.NET Core secrets
+secrets.json
+
+# Environment
+.env
+.env.*
+
+# Publish results
+publish/
+out/
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+*.testresults
+*.trx
+
+# Global config
+global.json
+
+# Local tool manifest
+.dotnet-tools.json
+
+# Web stuff
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# VS for Mac
+.vscode-server/
+
+# Others
+*.swp
+*.bak
+*.tmp
