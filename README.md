@@ -12,6 +12,29 @@ Welcome to the SPROUT Hackathon! This starter repo helps you use your company's 
 - Ready-to-use endpoint: `/api/employee/{id}`
 - Open for AI extensibility
 
+---
+## 🚀 Getting Started (VS Code Friendly)
+
+### Install These First:
+1. **[Visual Studio Code](https://code.visualstudio.com/)**  
+   - A lightweight editor for code and web apps
+
+2. **C# Extension for VS Code**  
+   - Open VS Code > Extensions (Ctrl+Shift+X)  
+   - Search for `C#` and install the one by Microsoft (`ms-dotnettools.csharp`)
+
+3. **[.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)**  
+   - Needed to run and build the app  
+   - After install, check by running in terminal:  
+     ```bash
+     dotnet --version
+     ```
+
+---
+
+## 📁 Project Structure
+
+```bash
 SproutHackathon/
 ├── SproutHackathon.API/         # Presentation Layer (Startup project)
 │   ├── Controllers/             # API endpoints
@@ -31,24 +54,7 @@ SproutHackathon/
 │
 ├── SproutHackathon.sln          # Solution file
 └── README.md                    # Hackathon guide
-
----
-## 🚀 Getting Started (VS Code Friendly)
-
-### Install These First:
-1. **[Visual Studio Code](https://code.visualstudio.com/)**  
-   - A lightweight editor for code and web apps
-
-2. **C# Extension for VS Code**  
-   - Open VS Code > Extensions (Ctrl+Shift+X)  
-   - Search for `C#` and install the one by Microsoft (`ms-dotnettools.csharp`)
-
-3. **[.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)**  
-   - Needed to run and build the app  
-   - After install, check by running in terminal:  
-     ```bash
-     dotnet --version
-     ```
+```
 
 ---
 
