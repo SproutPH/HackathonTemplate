@@ -1,4 +1,4 @@
-namespace SproutHackathon.BLL.DTOs
+namespace SproutHackathon.Business.DTOs
 {
    public class EmployeeDto
     {

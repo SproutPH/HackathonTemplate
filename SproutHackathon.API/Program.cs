@@ -1,5 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using SproutHackathon.BLL.LogicCollection.EmployeeBusiness;
+using SproutHackathon.Business.LogicCollection.EmployeeBusiness;
+using SproutHackathon.DataAccess.Contexts;
+using SproutHackathon.DataAccess.Repositories.Note;
 using SproutHackathon.Services.Helpers;
 using SproutHackathon.Services.ServiceCollection.AuthService;
 using SproutHackathon.Services.ServiceCollection.EmployeeService;
@@ -25,6 +28,13 @@ builder.Services.AddScoped<IEmployeeBusiness, EmployeeBusiness>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ApiRequestHelper>();
 builder.Services.AddHttpClient();
+
+builder.Services.AddDbContext<SproutDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
+
+
+builder.Services.AddScoped<INoteBusiness, NoteBusiness>();
+builder.Services.AddScoped<INoteRepository, NoteRepository>();
 
 var app = builder.Build();
 app.UseStaticFiles();

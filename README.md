@@ -9,7 +9,7 @@ Welcome to the Sprout Hackathon! This starter repo helps you use your company's 
 - ASP.NET Core 9.0 Web API (VS Code friendly)
 - 🔁 Reusable token-based Partner API integration
 - Clean architecture: API (Presentation), BLL (Business Logic), Services (External APIs)
-- Ready-to-use endpoint: `/api/employee/{id}`
+- Ready-to-use endpoint: `/api/employees/{id}`
 - Open for AI extensibility
 
 ---

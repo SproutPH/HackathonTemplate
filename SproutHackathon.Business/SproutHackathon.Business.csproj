@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SproutHackathon.Services\SproutHackathon.Services.csproj" />
+    <ProjectReference Include="..\SproutHackathon.DataAccess\SproutHackathon.DataAccess.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

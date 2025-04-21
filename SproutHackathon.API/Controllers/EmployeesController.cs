@@ -1,16 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
-using SproutHackathon.BLL.DTOs;
-using SproutHackathon.BLL.LogicCollection.EmployeeBusiness;
+using SproutHackathon.Business.DTOs;
+using SproutHackathon.Business.LogicCollection.EmployeeBusiness;
 
 namespace SproutHackathon.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EmployeeController : ControllerBase
+    public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeBusiness _employeeBusiness;
 
-        public EmployeeController(IEmployeeBusiness employeeBusiness)
+        public EmployeesController(IEmployeeBusiness employeeBusiness)
         {
             _employeeBusiness = employeeBusiness;
         }

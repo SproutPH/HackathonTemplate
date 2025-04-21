@@ -1,6 +1,6 @@
-using SproutHackathon.BLL.DTOs;
+using SproutHackathon.Business.DTOs;
 
-namespace SproutHackathon.BLL.LogicCollection.EmployeeBusiness
+namespace SproutHackathon.Business.LogicCollection.EmployeeBusiness
 {
     public interface IEmployeeBusiness
     {

@@ -1,7 +1,7 @@
-using SproutHackathon.BLL.DTOs;
+using SproutHackathon.Business.DTOs;
 using SproutHackathon.Services.ServiceCollection.EmployeeService;
 
-namespace SproutHackathon.BLL.LogicCollection.EmployeeBusiness
+namespace SproutHackathon.Business.LogicCollection.EmployeeBusiness
 {
     public class EmployeeBusiness : IEmployeeBusiness
     {
