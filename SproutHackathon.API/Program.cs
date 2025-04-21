@@ -1,9 +1,8 @@
 using Microsoft.OpenApi.Models;
-using SproutHackathon.BLL.Interfaces;
-using SproutHackathon.BLL.Services;
+using SproutHackathon.BLL.LogicCollection.EmployeeBusiness;
 using SproutHackathon.Services.Helpers;
-using SproutHackathon.Services.Interfaces;
-using SproutHackathon.Services.Repositories;
+using SproutHackathon.Services.ServiceCollection.AuthService;
+using SproutHackathon.Services.ServiceCollection.EmployeeService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,10 +18,11 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+
 // OPTIONAL: Register BLL/DAL (if you don't use DependencyInjection.cs)
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
-builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IEmployeeBusiness, EmployeeBusiness>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ApiRequestHelper>();
 builder.Services.AddHttpClient();
 

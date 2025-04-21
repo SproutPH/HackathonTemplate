@@ -1,23 +1,23 @@
 using System.Net.Http.Headers;
 using Microsoft.Extensions.Configuration;
-using SproutHackathon.Services.Interfaces;
+using SproutHackathon.Services.ServiceCollection.AuthService;
 
 namespace SproutHackathon.Services.Helpers
 {
     public class ApiRequestHelper
     {
-        private readonly IAuthRepository _authRepository;
+        private readonly IAuthService _authService;
         private readonly IConfiguration _config;
 
-        public ApiRequestHelper(IAuthRepository authRepository, IConfiguration config)
+        public ApiRequestHelper(IAuthService authService, IConfiguration config)
         {
-            _authRepository = authRepository;
+            _authService = authService;
             _config = config;
         }
 
         public async Task<HttpRequestMessage> CreateAuthorizedRequest(HttpMethod method, string relativeUrl)
         {
-            var token = await _authRepository.GetAccessTokenAsync();
+            var token = await _authService.GetAccessTokenAsync();
             var fullUrl = $"{_config["PartnerApi:ApiBaseUrl"]}/{relativeUrl}";
 
             var request = new HttpRequestMessage(method, fullUrl);

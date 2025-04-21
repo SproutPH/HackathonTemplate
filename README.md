@@ -44,12 +44,10 @@ SproutHackathon/
 │
 ├── SproutHackathon.BLL/         # Business Logic Layer (DTOs, Services)
 │   ├── DTOs/
-│   ├── Interfaces/
-│   └── Services/
+│   └── LogicCollection/
 │
 ├── SproutHackathon.Services/    # Partner API integration (external)
-│   ├── Interfaces/
-│   ├── Repositories/
+│   ├── ServiceCollection/
 │   └── Helpers/
 │
 ├── SproutHackathon.sln          # Solution file

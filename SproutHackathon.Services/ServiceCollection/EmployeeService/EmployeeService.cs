@@ -1,18 +1,15 @@
-using System.Net.Http.Headers;
 using System.Net.Http.Json;
-using Microsoft.Extensions.Configuration;
 using SproutHackathon.Services.Helpers;
-using SproutHackathon.Services.Interfaces;
 using SproutHackathon.Services.Models;
 
-namespace SproutHackathon.Services.Repositories
+namespace SproutHackathon.Services.ServiceCollection.EmployeeService
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class EmployeeService : IEmployeeService
     {
         private readonly HttpClient _httpClient;
         private readonly ApiRequestHelper _requestHelper;
 
-        public EmployeeRepository(HttpClient httpClient, ApiRequestHelper requestHelper)
+        public EmployeeService(HttpClient httpClient, ApiRequestHelper requestHelper)
         {
             _httpClient = httpClient;
             _requestHelper = requestHelper;

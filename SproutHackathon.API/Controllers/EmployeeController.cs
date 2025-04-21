@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using SproutHackathon.BLL.Interfaces;
 using SproutHackathon.BLL.DTOs;
+using SproutHackathon.BLL.LogicCollection.EmployeeBusiness;
 
 namespace SproutHackathon.API.Controllers
 {
@@ -8,17 +8,17 @@ namespace SproutHackathon.API.Controllers
     [Route("api/[controller]")]
     public class EmployeeController : ControllerBase
     {
-        private readonly IEmployeeService _employeeService;
+        private readonly IEmployeeBusiness _employeeBusiness;
 
-        public EmployeeController(IEmployeeService employeeService)
+        public EmployeeController(IEmployeeBusiness employeeBusiness)
         {
-            _employeeService = employeeService;
+            _employeeBusiness = employeeBusiness;
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<EmployeeDto>> Get(int id)
         {
-            var employee = await _employeeService.GetEmployeeAsync(id);
+            var employee = await _employeeBusiness.GetEmployeeAsync(id);
             return Ok(employee);
         }
     }

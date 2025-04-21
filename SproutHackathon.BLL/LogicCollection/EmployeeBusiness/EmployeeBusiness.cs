@@ -1,21 +1,20 @@
 using SproutHackathon.BLL.DTOs;
-using SproutHackathon.BLL.Interfaces;
-using SproutHackathon.Services.Interfaces;
+using SproutHackathon.Services.ServiceCollection.EmployeeService;
 
-namespace SproutHackathon.BLL.Services
+namespace SproutHackathon.BLL.LogicCollection.EmployeeBusiness
 {
-    public class EmployeeService : IEmployeeService
+    public class EmployeeBusiness : IEmployeeBusiness
     {
-        private readonly IEmployeeRepository _repo;
+        private readonly IEmployeeService _service;
 
-        public EmployeeService(IEmployeeRepository repo)
+        public EmployeeBusiness(IEmployeeService service)
         {
-            _repo = repo;
+            _service = service;
         }
 
         public async Task<EmployeeDto> GetEmployeeAsync(int id)
         {
-            var employee = await _repo.GetEmployeeAsync(id);
+            var employee = await _service.GetEmployeeAsync(id);
             return new EmployeeDto
             {
                 EmployeeId = employee.basicInformation.employeeId,

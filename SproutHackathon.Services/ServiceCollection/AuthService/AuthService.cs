@@ -1,16 +1,15 @@
 using System.Net.Http.Headers;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
-using SproutHackathon.Services.Interfaces;
 
-namespace SproutHackathon.Services.Repositories
+namespace SproutHackathon.Services.ServiceCollection.AuthService
 {
-    public class AuthRepository : IAuthRepository
+    public class AuthService : IAuthService
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
 
-        public AuthRepository(HttpClient httpClient, IConfiguration config)
+        public AuthService(HttpClient httpClient, IConfiguration config)
         {
             _httpClient = httpClient;
             _config = config;
