@@ -35,8 +35,8 @@ builder.Services.AddDbContext<SproutDbContext>(options =>
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, o =>
             {
-                o.MetadataAddress = "https://sso-test-i1-admin.sprout.ph/realms/justin-local/.well-known/openid-configuration";
-                o.Authority = "https://sso-test-i1-admin.sprout.ph/realms/justin-local";
+                o.MetadataAddress = "https://app-sprout-idp-test-instance1-a.azurewebsites.net/realms/justin-local/.well-known/openid-configuration";
+                o.Authority = "https://app-sprout-idp-test-instance1-a.azurewebsites.net/realms/justin-local";
                 o.Audience = "account";
             });
 
