@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SproutHackathon.Business.LogicCollection.EmployeeBusiness;
 using SproutHackathon.DataAccess.Entities;
 
 namespace SproutHackathon.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
      public class NotesController : ControllerBase
