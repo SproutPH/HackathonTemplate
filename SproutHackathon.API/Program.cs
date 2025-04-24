@@ -29,8 +29,19 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ApiRequestHelper>();
 builder.Services.AddHttpClient();
 
+var dbProvider = builder.Configuration["DatabaseProvider"];
+
 builder.Services.AddDbContext<SproutDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Default")));
+{
+    if (dbProvider == "postgres")
+    {
+        options.UseNpgsql(builder.Configuration.GetConnectionString("Postgres"));
+    }
+    else // fallback to sqlite
+    {
+        options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
+    }
+});
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, o =>
