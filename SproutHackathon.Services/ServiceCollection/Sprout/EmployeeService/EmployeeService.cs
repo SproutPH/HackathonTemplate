@@ -2,7 +2,7 @@ using System.Net.Http.Json;
 using SproutHackathon.Services.Helpers;
 using SproutHackathon.Services.Models;
 
-namespace SproutHackathon.Services.ServiceCollection.EmployeeService
+namespace SproutHackathon.Services.ServiceCollection.Sprout.EmployeeService
 {
     public class EmployeeService : IEmployeeService
     {
@@ -15,13 +15,13 @@ namespace SproutHackathon.Services.ServiceCollection.EmployeeService
             _requestHelper = requestHelper;
         }
 
-        public async Task<Employee> GetEmployeeAsync(int id)
+        public async Task<EmployeeOutput> GetEmployeeAsync(int id)
         {
-            var request = await _requestHelper.CreateAuthorizedRequest(HttpMethod.Get, $"/e/api/v1/Employees/{id}");
+            var request = await _requestHelper.CreateSproutAuthRequest(HttpMethod.Get, $"/e/api/v1/Employees/{id}");
             var response = await _httpClient.SendAsync(request);
 
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<Employee>();
+            return await response.Content.ReadFromJsonAsync<EmployeeOutput>();
         }
     }
 }

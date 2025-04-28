@@ -1,4 +1,4 @@
-namespace SproutHackathon.Services.ServiceCollection.AuthService
+namespace SproutHackathon.Services.ServiceCollection.Sprout.AuthService
 {
     public interface IAuthService
     {

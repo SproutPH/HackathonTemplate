@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SproutHackathon.Business.DTOs;
 using SproutHackathon.Business.LogicCollection.EmployeeBusiness;
 
 namespace SproutHackathon.API.Controllers
@@ -18,7 +17,7 @@ namespace SproutHackathon.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<EmployeeDto>> Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
             var employee = await _employeeBusiness.GetEmployeeAsync(id);
             return Ok(employee);

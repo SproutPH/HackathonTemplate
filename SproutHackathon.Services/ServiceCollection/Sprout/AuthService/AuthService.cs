@@ -2,7 +2,7 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 
-namespace SproutHackathon.Services.ServiceCollection.AuthService
+namespace SproutHackathon.Services.ServiceCollection.Sprout.AuthService
 {
     public class AuthService : IAuthService
     {
