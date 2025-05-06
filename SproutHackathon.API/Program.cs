@@ -78,10 +78,12 @@ builder.Services.AddDbContext<SproutDbContext>(options =>
     }
 });
 
+var realmUrl = builder.Configuration["RealmUrl"];
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, o =>
             {
-                o.MetadataAddress = "https://sso-test.sprout.ph/realms/eco-zeus/.well-known/openid-configuration";
+                o.MetadataAddress = ".well-known/openid-configuration";
                 o.Authority = "https://sso-test.sprout.ph/realms/eco-zeus";
                 o.Audience = "account";
             });

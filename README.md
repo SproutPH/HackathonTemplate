@@ -38,17 +38,22 @@ Welcome to the Sprout Hackathon! This starter repo helps you use your company's 
 SproutHackathon/
 ├── SproutHackathon.API/         # Presentation Layer (Startup project)
 │   ├── Controllers/             # API endpoints
-│   ├── wwwroot/                 # Static files (landing page, frontend)
 │   ├── appsettings.json         # Environment config (tenant, URLs, secrets)
 │   └── Program.cs               # Startup logic
 │
-├── SproutHackathon.BLL/         # Business Logic Layer (DTOs, Services)
+├── SproutHackathon.Business/    # Business Logic Layer (DTOs, Services)
 │   ├── DTOs/
 │   └── LogicCollection/
 │
-├── SproutHackathon.Services/    # Partner API integration (external)
-│   ├── ServiceCollection/
-│   └── Helpers/
+├── SproutHackathon.DataAccess/  # Database abstraction layer
+│   ├── Contexts/                # EF Core DbContext
+│   ├── Entities/                # ORM entity models
+│   └── Repositories/            # DB repositories (per entity)
+│
+├── SproutHackathon.Services/    # Partner + Ecosystem integrations
+│   ├── ServiceCollection/       # Organized per domain (e.g., Sprout, Ecosystem)
+│   ├── Models/                  # Raw API models (external response shape)
+│   └── Helpers/                 # Auth, HTTP clients, etc.
 │
 ├── SproutHackathon.sln          # Solution file
 └── README.md                    # Hackathon guide
