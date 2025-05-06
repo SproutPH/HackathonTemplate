@@ -83,8 +83,8 @@ var realmUrl = builder.Configuration["RealmUrl"];
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, o =>
             {
-                o.MetadataAddress = ".well-known/openid-configuration";
-                o.Authority = "https://sso-test.sprout.ph/realms/eco-zeus";
+                o.MetadataAddress = $"{realmUrl}.well-known/openid-configuration";
+                o.Authority = $"{realmUrl}";
                 o.Audience = "account";
             });
 
