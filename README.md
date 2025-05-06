@@ -41,9 +41,9 @@ SproutHackathon/
 │   ├── appsettings.json         # Environment config (tenant, URLs, secrets)
 │   └── Program.cs               # Startup logic
 │
-├── SproutHackathon.Business/    # Business Logic Layer (DTOs, Services)
-│   ├── DTOs/
-│   └── LogicCollection/
+├── SproutHackathon.Business/    # Business Logic Layer
+│   ├── DTOs/                    # BData Transfer Objects
+│   └── LogicCollection/         # Business Service Implementations
 │
 ├── SproutHackathon.DataAccess/  # Database abstraction layer
 │   ├── Contexts/                # EF Core DbContext
