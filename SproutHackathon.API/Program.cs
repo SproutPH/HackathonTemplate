@@ -89,8 +89,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             });
 
 var app = builder.Build();
-app.UseStaticFiles();
-app.MapFallbackToFile("index.html");
 // Enable Swagger only in Development (optional)
 if (app.Environment.IsDevelopment())
 {
