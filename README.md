@@ -63,10 +63,20 @@ SproutHackathon/
 
 ### Steps to Run
 
+#### ✅ Option 1: Using **VS Code**
+
 1. Open the folder in VS Code
 2. Update your `SproutHackathon.API/appsettings.json` with real API credentials
 3. Press `F5` to launch with the debugger
 4. Open your browser to `https://localhost:5069/`
+
+#### ✅ Option 2: Using **.NET CLI** (for any editor or IDE)
+
+```bash
+cd SproutHackathon.API
+dotnet restore
+dotnet build
+dotnet run
 
 ---
 
